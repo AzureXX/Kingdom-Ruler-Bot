@@ -5,7 +5,7 @@ const getNewData = (ctx, changes) => {
     const data = JSON.parse(JSON.stringify(current));
 
     changes.forEach((change) => {
-        switch (key) {
+        switch (change.type) {
             case 'update-name':
                 data.name = change.data;
                 break;
